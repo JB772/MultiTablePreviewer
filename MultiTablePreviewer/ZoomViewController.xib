@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ZoomView" customModule="MultiTablePreviewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEd-Tg-fm4">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Egl-eT-9GE">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Egl-eT-9GE" firstAttribute="leading" secondItem="Zhy-MC-Qch" secondAttribute="leading" id="5Xx-f0-QSR"/>
+                        <constraint firstItem="Egl-eT-9GE" firstAttribute="width" secondItem="lqE-b3-sKv" secondAttribute="width" id="Dvx-E3-kW6"/>
+                        <constraint firstItem="Egl-eT-9GE" firstAttribute="height" secondItem="lqE-b3-sKv" secondAttribute="height" id="TCe-LC-PqW"/>
+                        <constraint firstItem="Egl-eT-9GE" firstAttribute="top" secondItem="Zhy-MC-Qch" secondAttribute="top" id="kt6-9t-JYR"/>
+                        <constraint firstItem="Egl-eT-9GE" firstAttribute="trailing" secondItem="Zhy-MC-Qch" secondAttribute="trailing" id="rmz-el-uqY"/>
+                        <constraint firstItem="Egl-eT-9GE" firstAttribute="bottom" secondItem="Zhy-MC-Qch" secondAttribute="bottom" id="vkJ-Zh-zkX"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Zhy-MC-Qch"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="lqE-b3-sKv"/>
+                    <connections>
+                        <outlet property="delegate" destination="i5M-Pr-FkT" id="EeI-e2-FbJ"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SEd-Tg-fm4" secondAttribute="bottom" id="31b-hN-fCW"/>
+                <constraint firstItem="SEd-Tg-fm4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6ku-mg-ulg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SEd-Tg-fm4" secondAttribute="trailing" id="7Io-TX-lhf"/>
+                <constraint firstItem="SEd-Tg-fm4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="R6s-H7-E9Q"/>
+            </constraints>
+            <connections>
+                <outlet property="zoomImageView" destination="Egl-eT-9GE" id="1Up-GH-VmF"/>
+                <outlet property="zoomScrollControl" destination="SEd-Tg-fm4" id="OqB-zZ-ATX"/>
+            </connections>
+            <point key="canvasLocation" x="-201" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
